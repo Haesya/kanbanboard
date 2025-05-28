@@ -1,0 +1,50 @@
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #0067A3;
+}
+
+.profile {
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+
+.profile__picture {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.profile__button {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.burger__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.no__burger__menu {
+  display: none;
+}
