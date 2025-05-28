@@ -1,0 +1,14 @@
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+  background-color: #0067A3;
+  padding: 17px 0 17px 21px;
+}
+
+.tasks {
+  display: flex;
+  gap: 36px;
+}

@@ -1,0 +1,7 @@
+.main {
+  grid-area: main;
+  display: flex;
+  background-color: #0079bf;
+  height: 200px; }
+
+/*# sourceMappingURL=main.module.css.map */
