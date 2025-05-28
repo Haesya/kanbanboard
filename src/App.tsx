@@ -8,19 +8,29 @@ function App() {
     const [state, setState] = useState([
         {
             title: 'Backlog',
-            tasks: ['backlogtask1', 'backlogtask2', 'backlogtask3'],
+            tasks: [
+                {
+                    id: '1',
+                    task: "task1",
+                    desc: "description1",
+                },
+                {
+                    id: '2',
+                    task: "task2",
+                    desc: "description2",
+                }]
         },
         {
             title: 'Ready',
-            tasks: ['readytask1', 'readytask2', 'readytask3'],
+            tasks: [],
         },
         {
             title: 'In Progress',
-            tasks: ['IP1', 'IP2', 'IP3'],
+            tasks: [],
         },
         {
             title: 'Finished',
-            tasks: ['finished1', 'finished2', 'finished3'],
+            tasks: [],
         }
     ])
 

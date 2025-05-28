@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,MAAO;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,WAAW;EACnB,GAAG,EAAE,IAAI;EACT,KAAK,EAAE,IAAI",
-"sources": ["blockWithTasks.module.scss"],
-"names": [],
-"file": "blockWithTasks.module.css"
-}
