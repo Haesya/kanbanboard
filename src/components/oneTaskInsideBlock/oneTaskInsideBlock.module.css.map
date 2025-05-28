@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACP,gBAAgB,EAAE,KAAK;EACvB,MAAM,EAAE,WAAW;EACnB,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,OAAO;EAChB,SAAS,EAAE,IAAI",
+"sources": ["oneTaskInsideBlock.module.scss"],
+"names": [],
+"file": "oneTaskInsideBlock.module.css"
+}
