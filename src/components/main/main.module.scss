@@ -1,9 +1,10 @@
 .main {
+  box-sizing: border-box;
   grid-area: main;
   display: flex;
   gap: 24px;
+  height: 100%;
   background-color: #0079bf;
-  height: 400px;
   padding: 24px;
 }
 

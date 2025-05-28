@@ -4,7 +4,7 @@ import style from './oneTaskInsideBlock.module.css'
 const RenderOneTaskInsideBlock = () => {
     return (
         <>
-            <div className={style.oneTask}>
+            <div className={style.one__task}>
                 Залупа коня
             </div>
         </>

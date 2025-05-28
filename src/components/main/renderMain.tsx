@@ -1,5 +1,6 @@
 import style from './main.module.css'
 import {RenderBlockWithTasks} from "../blockWithTasks/renderBlockWithTasks.tsx";
+import {RenderAddCard} from "../addTask/renderAddCard.tsx";
 
 /*тут рендерим мэйн и 4 блока внутри него*/
 const RenderMain = ({state, ...props}) => {
@@ -10,7 +11,7 @@ const RenderMain = ({state, ...props}) => {
                     <div key={item.title} className={style.block}>
                         <h2>{item.title}</h2>
                         <RenderBlockWithTasks />
-                        <div>Add Card</div>
+                        <RenderAddCard />
                     </div>
                 )}
             </div>

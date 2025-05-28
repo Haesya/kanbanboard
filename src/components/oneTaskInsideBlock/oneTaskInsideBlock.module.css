@@ -1,7 +1,7 @@
-.oneTask {
+.one__task {
   background-color: white;
   height: fit-content;
-  border: 5px;
+  border-radius: 5px;
   padding: 7px 8px;
   font-size: 18px; }
 
