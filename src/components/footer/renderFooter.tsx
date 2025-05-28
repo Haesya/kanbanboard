@@ -5,10 +5,10 @@ const RenderFooter = () => {
         <div className={style.footer}>
             <div className={style.tasks}>
                 <div>
-                    Active tasks:
+                    Active tasks: 0
                 </div>
                 <div>
-                    Finished tasks:
+                    Finished tasks: 0
                 </div>
             </div>
             <div>

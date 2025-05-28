@@ -11,7 +11,12 @@ const RenderMain = ({state, ...props}) => {
                     <div key={item.title} className={style.block}>
                         <h2>{item.title}</h2>
                         <RenderBlockWithTasks />
-                        <RenderAddCard />
+                        <RenderAddCard
+                            title={item.title}
+                            tasks={item.tasks}
+                            state={state}
+                            setState={props.setState}
+                        />
                     </div>
                 )}
             </div>

@@ -3,4 +3,8 @@
   font-size: 18px;
   cursor: pointer; }
 
+.add__newTask {
+  display: flex;
+  flex-direction: column; }
+
 /*# sourceMappingURL=addCard.module.css.map */

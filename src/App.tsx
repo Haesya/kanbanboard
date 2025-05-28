@@ -8,19 +8,19 @@ function App() {
     const [state, setState] = useState([
         {
             title: 'Backlog',
-            tasks: [],
+            tasks: ['backlogtask1', 'backlogtask2', 'backlogtask3'],
         },
         {
             title: 'Ready',
-            tasks: [],
+            tasks: ['readytask1', 'readytask2', 'readytask3'],
         },
         {
             title: 'In Progress',
-            tasks: [],
+            tasks: ['IP1', 'IP2', 'IP3'],
         },
         {
             title: 'Finished',
-            tasks: [],
+            tasks: ['finished1', 'finished2', 'finished3'],
         }
     ])
 
