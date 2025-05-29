@@ -21,7 +21,12 @@ const RenderMain = ({state, ...props}) => {
                                 )
                                 : <div>No tasks</div>
                         }
-                        <RenderAddCard/>
+                        <RenderAddCard
+                            title = {item.title}
+                            tasks = {item.tasks}
+                            state = {state}
+                            setState = {props.state}
+                        />
                     </div>
                 )}
             </div>

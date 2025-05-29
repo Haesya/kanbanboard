@@ -1,3 +1,9 @@
+@media screen and (min-width: 1px) {
+  .main {
+    flex-direction: column; } }
+@media screen and (min-width: 768px) {
+  .main {
+    flex-direction: row; } }
 .main {
   box-sizing: border-box;
   grid-area: main;

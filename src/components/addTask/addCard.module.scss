@@ -1,7 +1,5 @@
-.add__card {
-  color: #5e6c84;
+@mixin add__card {
   font-size: 18px;
-  cursor: pointer;
   border: none;
   background-color: transparent;
   width: fit-content;
@@ -12,4 +10,16 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.active {
+  @include add__card;
+  cursor: pointer;
+  color: #5e6c84;
+}
+
+.inactive {
+  @include add__card;
+  cursor: not-allowed;
+  color: #dab3b3;
 }

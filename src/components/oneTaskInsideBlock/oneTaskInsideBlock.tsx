@@ -1,10 +1,11 @@
 import {Link} from "react-router-dom";
+import style from './oneTaskInsideBlock.module.css'
 
 /*тут рендерим одну задачу*/
 const RenderOneTaskInsideBlock = ({ children, id }) => {
 
     return (
-        <Link to={`task${id}`}>
+        <Link className={style.one__task} to={`task${id}`}>
             {children}
         </Link >
     );
