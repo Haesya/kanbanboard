@@ -1,3 +1,36 @@
 .dropdown__menu{
-  background-color: #ebecf0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: center;
+  align-items: center;
+  height: 35px;
+  padding-right: 10px;
+  border: transparent;
+  border-radius: 5px;
+  cursor: text;
+  background-color: white;
+}
+
+.dropdown__menu > img {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+}
+
+li {
+  list-style: none;
+  line-height: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+li:hover{
+  background-color: #dedede;
 }

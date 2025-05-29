@@ -17,4 +17,10 @@
   font-size: 18px;
   line-height: 100%; }
 
+.add__new__task {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%; }
+
 /*# sourceMappingURL=input.module.css.map */

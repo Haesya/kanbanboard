@@ -11,18 +11,27 @@ function App() {
             tasks: [
                 {
                     id: '1',
-                    task: "task1",
-                    desc: "description1",
+                    task: "backlogtask1",
+                    desc: "backlogdescription1",
                 },
                 {
                     id: '2',
-                    task: "task2",
-                    desc: "description2",
+                    task: "backlogtask2",
+                    desc: "backlogdescription2",
                 }]
         },
         {
             title: 'Ready',
-            tasks: [],
+            tasks: [{
+                id: '1',
+                task: "readytask1",
+                desc: "readydescription1",
+            },
+                {
+                    id: '2',
+                    task: "readybacklogtask2",
+                    desc: "readydescription2",
+                }],
         },
         {
             title: 'In Progress',

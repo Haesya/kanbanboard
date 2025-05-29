@@ -1,6 +1,6 @@
 import style from './header.module.css'
 import avatar from '../../../public/avatar.svg'
-import arrow from '../../../public/arrow.svg'
+import arrow from '../../../public/whiteArrow.svg'
 import {useState} from "react";
 
 const RenderHeader = () => {

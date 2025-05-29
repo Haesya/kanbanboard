@@ -19,7 +19,7 @@ const RenderMain = ({state, ...props}) => {
                                         {item.task}
                                     </RenderOneTaskInsideBlock>
                                 )
-                                : <div>No tasks</div>
+                                : <div>Нет задач</div>
                         }
                         <RenderAddCard
                             title = {item.title}
