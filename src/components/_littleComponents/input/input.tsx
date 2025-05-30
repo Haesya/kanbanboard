@@ -6,7 +6,6 @@ const Input = ({state, setState, setIsToggled}) => {
     const [task, setTask] = useState('')
 
     const addNewTask = ()=> {
-        console.log(task)
         if(task.length > 0) {
             state[0].tasks.push ({
                 id: Date.now(),

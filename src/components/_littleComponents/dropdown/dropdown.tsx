@@ -25,10 +25,7 @@ const DropdownMenu = ({title, state, setState, setIsToggled}) => {
 
     const movingTasks = e => {
         const newTasks = state.map(block => {
-            console.log('дата',data)
-            console.log('блок',block)
-            const taskId = e.target.value
-            console.log('taskid',taskId)
+            const taskId = e.target.id
             let movableElement
             data.tasks.forEach(elem => {
                 if (elem.id == taskId) {
@@ -65,9 +62,10 @@ const DropdownMenu = ({title, state, setState, setIsToggled}) => {
                             {
                                 dropdownState.open && data.tasks.map(item => {
                                     return (
-                                        <li onClick={movingTasks}
-                                            value={item.id}
+                                        <li value={item.id}
+                                            id={item.id}
                                             key={item.id}
+                                            onClick={movingTasks}
                                         >
                                             {item.task}
                                         </li>
