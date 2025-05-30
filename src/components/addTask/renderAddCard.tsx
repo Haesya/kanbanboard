@@ -1,5 +1,6 @@
 import style from './addCard.module.css'
-import plus from '../../../public/plus.svg'
+import greyPlus from '../../../public/greyPlus.svg'
+import redPlus from '../../../public/redPlus.svg'
 import {useState} from "react";
 import {Input} from "../_littleComponents/input/input.tsx";
 import {DropdownMenu} from "../_littleComponents/dropdown/dropdown.tsx";
@@ -33,7 +34,7 @@ const RenderAddCard = ({title, tasks, state, ...props}) => {
         }
     }
     /*если заголовок бэклог,
-    *   то открываем input
+    *   то открываем input с кнопкой
     * иначе
     *   если в предыдущем блоке есть таски
     *       то открываем дропдаун с тасками предыдущего блока
@@ -43,7 +44,10 @@ const RenderAddCard = ({title, tasks, state, ...props}) => {
         <>
             {isToggled
                 ? <> {rightTitle(title) ?
-                    <Input setIsToggled={setIsToggled}/>
+                    <Input
+                        state = {state}
+                        setState = {props.setState}
+                        setIsToggled={setIsToggled}/>
                     :
                     <DropdownMenu
                         title = {title}
@@ -58,12 +62,12 @@ const RenderAddCard = ({title, tasks, state, ...props}) => {
                     takeTasks(title)
                         ?
                         <button className={style.active} onClick={handleToggle}>
-                            <img src={plus} alt={'plus'}/>
+                            <img src={greyPlus} alt={'plus'}/>
                             Add card
                         </button>
                         :
                         <button className={style.inactive}>
-                            <img src={plus} alt={'plus'}/>
+                            <img src={redPlus} alt={'plus'}/>
                             Add card
                         </button>
                 }</>

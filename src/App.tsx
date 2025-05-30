@@ -5,43 +5,13 @@ import {RenderMain} from "./components/main/renderMain.tsx";
 import {RenderFooter} from "./components/footer/renderFooter.tsx";
 
 function App() {
-    const [state, setState] = useState([
-        {
-            title: 'Backlog',
-            tasks: [
-                {
-                    id: '1',
-                    task: "backlogtask1",
-                    desc: "backlogdescription1",
-                },
-                {
-                    id: '2',
-                    task: "backlogtask2",
-                    desc: "backlogdescription2",
-                }]
-        },
-        {
-            title: 'Ready',
-            tasks: [{
-                id: '3',
-                task: "readytask1",
-                desc: "readydescription1",
-            },
-                {
-                    id: '4',
-                    task: "readybacklogtask2",
-                    desc: "readydescription2",
-                }],
-        },
-        {
-            title: 'In Progress',
-            tasks: [],
-        },
-        {
-            title: 'Finished',
-            tasks: [],
-        }
-    ])
+    const [state, setState] = useState(
+        [
+            {title: 'Backlog', tasks: []},
+            {title: 'Ready', tasks: [],},
+            {title: 'In Progress', tasks: [],},
+            {title: 'Finished', tasks: [],}
+        ])
 
 
     return (

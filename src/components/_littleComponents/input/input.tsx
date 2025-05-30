@@ -1,10 +1,22 @@
 import style from './input.module.css'
 import ClickAwayListener from "@mui/material/ClickAwayListener";
+import {useState} from "react";
 
-const Input = ({setIsToggled}) => {
-    function addInfo() {
-        console.log('Все протыкивается')
-        setIsToggled(false)
+const Input = ({state, setState, setIsToggled}) => {
+    const [task, setTask] = useState('')
+
+    const addNewTask = ()=> {
+        console.log(task)
+        if(task.length > 0) {
+            state[0].tasks.push ({
+                id: Date.now(),
+                task: task,
+                description: '',
+            })
+
+            setState([...state]);
+        }
+        handleClose()
     }
 
     const handleClose = () => {
@@ -15,8 +27,8 @@ const Input = ({setIsToggled}) => {
         <>
             <ClickAwayListener onClickAway={handleClose}>
                 <div className={style.add__new__task}>
-                    <input className={style.input}></input>
-                    <button className={style.submit} onClick={addInfo}>Submit</button>
+                    <input className={style.input} onChange={e => setTask(e.target.value)}></input>
+                    <button className={style.submit} onClick={addNewTask}>Submit</button>
                 </div>
             </ClickAwayListener>
         </>
