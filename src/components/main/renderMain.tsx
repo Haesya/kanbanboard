@@ -15,7 +15,10 @@ const RenderMain = ({state, ...props}) => {
                             item.tasks.length
                                 ?
                                 item.tasks.map(item =>
-                                    <RenderOneTaskInsideBlock key={item.id} id={item.id}>
+                                    <RenderOneTaskInsideBlock
+                                        key={item.id}
+                                        id={item.id}
+                                    >
                                         {item.task}
                                     </RenderOneTaskInsideBlock>
                                 )
@@ -25,7 +28,7 @@ const RenderMain = ({state, ...props}) => {
                             title = {item.title}
                             tasks = {item.tasks}
                             state = {state}
-                            setState = {props.state}
+                            setState = {props.setState}
                         />
                     </div>
                 )}

@@ -47,7 +47,6 @@ const RenderAddCard = ({title, tasks, state, ...props}) => {
                     :
                     <DropdownMenu
                         title = {title}
-                        tasks = {tasks}
                         state = {state}
                         setState = {props.setState}
                         setIsToggled={setIsToggled}

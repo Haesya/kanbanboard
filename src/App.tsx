@@ -23,12 +23,12 @@ function App() {
         {
             title: 'Ready',
             tasks: [{
-                id: '1',
+                id: '3',
                 task: "readytask1",
                 desc: "readydescription1",
             },
                 {
-                    id: '2',
+                    id: '4',
                     task: "readybacklogtask2",
                     desc: "readydescription2",
                 }],
@@ -46,9 +46,9 @@ function App() {
 
     return (
         <>
-                <RenderHeader/>
-                <RenderMain state={state} setState={setState}/>
-                <RenderFooter/>
+            <RenderHeader/>
+            <RenderMain state={state} setState={setState}/>
+            <RenderFooter/>
         </>
     )
 }
