@@ -5,7 +5,7 @@ import style from './oneTaskInsideBlock.module.css'
 const RenderOneTaskInsideBlock = ({ children, id }) => {
 
     return (
-        <Link className={style.one__task} to={`task${id}`}>
+        <Link className={style.one__task} to={`${id}`}>
             {children}
         </Link >
     );
