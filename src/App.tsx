@@ -1,6 +1,6 @@
 import './App.css'
-import {useState} from "react";
-import {RenderHeader} from './components/header/renderHeader.tsx';
+import {useEffect, useState} from "react";
+import {RenderHeader} from "./components/header/renderHeader.tsx";
 import {RenderMain} from "./components/main/renderMain.tsx";
 import {RenderFooter} from "./components/footer/renderFooter.tsx";
 
@@ -13,13 +13,24 @@ function App() {
             {title: 'Finished', tasks: [],}
         ])
 
+    useEffect(() => {
+        const tasks = localStorage.getItem('state');
+        setState(JSON.parse(tasks))
+    }, [])
+
+    useEffect(() => {
+        window.localStorage.setItem('state', JSON.stringify(state))
+    }, [state]);
+
+    const finishedTasks = state[3].tasks.length
+    const activeTasks = state[0].tasks.length + state[1].tasks.length + state[2].tasks.length
 
     return (
-        <>
-            <RenderHeader/>
-            <RenderMain state={state} setState={setState}/>
-            <RenderFooter/>
-        </>
+            <>
+                <RenderHeader />
+                <RenderMain state={state} setState={setState} />
+                <RenderFooter activeTasks={activeTasks} finishedTasks={finishedTasks} />
+            </>
     )
 }
 

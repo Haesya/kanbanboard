@@ -8,6 +8,7 @@ const RenderHeader = () => {
 
 
     return (
+        <>
         <header className={style.header}>
             <div>
                 <h1>Awesome Kanban Board</h1>
@@ -26,6 +27,7 @@ const RenderHeader = () => {
                 </button>
             </div>
         </header>
+        </>
     )
 }
 

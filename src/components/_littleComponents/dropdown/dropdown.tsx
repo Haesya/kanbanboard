@@ -50,6 +50,8 @@ const DropdownMenu = ({title, state, setState, setIsToggled}) => {
     const [dropdownState, setDropdownState] = useState({open: false});
     const handleDropdownClick = () => setDropdownState({open: !dropdownState.open});
 
+
+    /*обязательно селектом? селект нельзя редактировать адекватно, чтобы ближе к макету было*/
     return (
         <>
             <ClickAwayListener onClickAway={handleClose}>

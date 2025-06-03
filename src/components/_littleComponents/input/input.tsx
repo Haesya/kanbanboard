@@ -10,7 +10,7 @@ const Input = ({state, setState, setIsToggled}) => {
             state[0].tasks.push ({
                 id: Date.now(),
                 task: task,
-                description: '',
+                description: 'This task has no description',
             })
 
             setState([...state]);

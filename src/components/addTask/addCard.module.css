@@ -9,7 +9,13 @@
   background-color: transparent;
   width: fit-content;
   cursor: pointer;
-  color: #5e6c84; }
+  color: #5e6c84;
+  transition-duration: 0.4s; }
+
+.active:hover {
+  background-color: #b3ffa5;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px 10px rgba(138, 247, 118, 0.2); }
 
 .inactive {
   font-size: 18px;

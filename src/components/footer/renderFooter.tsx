@@ -1,14 +1,14 @@
 import style from './footer.module.css'
 
-const RenderFooter = () => {
+const RenderFooter = ({activeTasks, finishedTasks}) => {
     return (
         <div className={style.footer}>
             <div className={style.tasks}>
                 <div>
-                    Active tasks: 0
+                    Active tasks: {activeTasks}
                 </div>
                 <div>
-                    Finished tasks: 0
+                    Finished tasks: {finishedTasks}
                 </div>
             </div>
             <div>
