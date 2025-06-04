@@ -37,7 +37,7 @@ const RenderMain = ({state, ...props}) => {
                         )
                     }
                     />
-                    <Route path=':id' element={<RenderTaskContent />}/>
+                    <Route path=':id' element={<RenderTaskContent state={state} setState={props.setState}/>}/>
                 </Routes>
             </div>
         </>

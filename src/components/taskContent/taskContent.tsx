@@ -1,45 +1,76 @@
 import style from '../taskContent/taskContent.module.css'
 import cross from '../../../public/cross.svg'
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
+import {useState} from "react";
 
-const RenderTaskContent = () => {
+const RenderTaskContent = ({state, setState}) => {
+    const [desc, setDesc] = useState('')
     const params = useParams()
-    console.log(params.id)
-    const state = localStorage.getItem('state')
-    console.log('стате',state)
-    const jsonstate = JSON.parse(state)
-    console.log('жисонстате',jsonstate)
-    const description = jsonstate.map(elem => {
-        elem.tasks.map(e => {
-            if(e.id == params.id) {
-                console.log(e.description)
-                return e.description
-            }
+
+    const findTask = () => {
+        let param
+        if (localStorage.getItem('OpenTask') === null) {
+            param = params.id
+            localStorage.setItem('OpenTask', param)
+        } else {
+            param = localStorage.getItem('OpenTask')
+        }
+        let taskkk
+        state.map(elem => {
+            elem.tasks.map(e => {
+                if (e.id == param) {
+                    taskkk = elem
+                }
+            })
         })
-    })
+        return taskkk
+    }
 
-    console.log('дескрипшион',description)
+    const openTitle = () => {
+        let taskk = findTask()
+        return taskk.tasks[0].task
+    }
+
     const openDescription = () => {
-
+        let taskkk = findTask()
+        return taskkk.tasks[0].description
     }
 
     const saveChanges = () => {
-
+        const newDescription = desc
+        const needToChange = findTask()
+        needToChange.tasks[0].description = newDescription
+        setState(state)
     }
 
+    const navigate = useNavigate();
     const closeDescription = () => {
-
+        localStorage.removeItem('OpenTask')
+        navigate(-1)
     }
 
     return (
         <div className={style.taskContent}>
             <div className={style.inside__task}>
-                <label>Сюда название таска</label>
-                <input className={style.input__description}/>
-                <button className={style.save__description} onClick={saveChanges}>Сохранить</button>
+                <label>{openTitle()}</label>
+                <textarea
+                    className={style.input__description}
+                    placeholder='Введите описание задачи.'
+                    defaultValue={openDescription()}
+                    onChange={e => setDesc(e.target.value)}
+                />
+                <button
+                    className={style.save__description}
+                    onClick={saveChanges}
+                >
+                    Сохранить
+                </button>
             </div>
-            <button className={style.close} onClick={closeDescription}>
-                <img src={cross} alt={'cross'} />
+            <button
+                className={style.close}
+                onClick={closeDescription}
+            >
+                <img src={cross} alt={'cross'}/>
             </button>
         </div>
 
