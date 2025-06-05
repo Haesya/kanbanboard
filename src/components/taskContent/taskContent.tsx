@@ -37,9 +37,12 @@ const RenderTaskContent = ({state, setState}) => {
     }
 
     const saveChanges = () => {
-        const newDescription = desc
         const needToChange = findTask()
-        needToChange.tasks[0].description = newDescription
+        if (desc.length > 0) {
+            needToChange.tasks[0].description = desc
+        } else {
+            needToChange.tasks[0].description = 'This task has no description.'
+        }
         setState(state)
     }
 

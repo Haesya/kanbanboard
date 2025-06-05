@@ -8,6 +8,7 @@
 
 .profile {
   display: flex;
+  position: relative;
   align-self: center;
   align-items: center; }
 
@@ -26,12 +27,24 @@
 
 .arrow {
   width: 20px;
-  height: 20px; }
+  height: 20px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: 0.2s; }
+
+.arrow__rotate {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+  transition: 0.2s; }
 
 .burger__menu {
   display: flex;
   flex-direction: column;
+  margin-top: 16px;
+  width: 100px;
   gap: 5px;
+  right: 0;
   position: absolute;
   color: black;
   background-color: white;
@@ -39,6 +52,12 @@
   padding: 8px;
   font-size: 14px;
   text-align: left; }
+
+.burger__menu > div {
+  cursor: pointer; }
+
+.burger__menu > div:hover {
+  background-color: #ebecf0; }
 
 .no__burger__menu {
   display: none; }

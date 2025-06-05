@@ -50,6 +50,7 @@ const DropdownMenu = ({title, state, setState, setIsToggled}) => {
     const [dropdownState, setDropdownState] = useState({open: false});
     const handleDropdownClick = () => setDropdownState({open: !dropdownState.open});
 
+    const [rotateArrow, setRotateArrow] = useState(false)
 
     /*обязательно селектом? селект нельзя редактировать адекватно, чтобы ближе к макету было*/
     return (
@@ -57,7 +58,12 @@ const DropdownMenu = ({title, state, setState, setIsToggled}) => {
             <ClickAwayListener onClickAway={handleClose}>
                 <div className={style.container}>
                     <label type="button" className={style.dropdown__menu} onClick={handleDropdownClick}>
-                        <img src={arrow} alt={'arrow'}/>
+                        <img
+                            className={rotateArrow ? style.arrow__rotate : style.arrow}
+                            src={arrow}
+                            alt={'arrow'}
+                            onClick={() => setRotateArrow(!rotateArrow)}
+                        />
                     </label>
                     <div className={style.dropdown}>
                         <ul>

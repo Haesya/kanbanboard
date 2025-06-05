@@ -5,7 +5,7 @@ import {useState} from "react";
 
 const RenderHeader = () => {
     const [visible, setVisible] = useState(false)
-
+    const [rotateArrow, setRotateArrow] = useState(false)
 
     return (
         <>
@@ -19,7 +19,7 @@ const RenderHeader = () => {
                     className={style.profile__button}
                     onClick={()=> setVisible(!visible)}
                 >
-                    <img className={style.arrow} src={arrow} alt={'arrow'} />
+                    <img className={rotateArrow ? style.arrow__rotate : style.arrow} src={arrow} alt={'arrow'} onClick={() => setRotateArrow(!rotateArrow)}/>
                     <div className={visible ? style.burger__menu : style.no__burger__menu}>
                         <div>Profile</div>
                         <div>Log Out</div>
