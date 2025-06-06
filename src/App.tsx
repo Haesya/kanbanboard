@@ -26,7 +26,7 @@ function App() {
             <>
                 <RenderHeader />
                 <RenderMain state={state} setState={setState} />
-                <RenderFooter state={state} setState={setState}/>
+                <RenderFooter state={state}/>
             </>
     )
 }
