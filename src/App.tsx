@@ -22,14 +22,11 @@ function App() {
         window.localStorage.setItem('state', JSON.stringify(state))
     }, [state]);
 
-    const finishedTasks = state[3].tasks.length
-    const activeTasks = state[0].tasks.length + state[1].tasks.length + state[2].tasks.length
-
     return (
             <>
                 <RenderHeader />
                 <RenderMain state={state} setState={setState} />
-                <RenderFooter activeTasks={activeTasks} finishedTasks={finishedTasks} />
+                <RenderFooter state={state} setState={setState}/>
             </>
     )
 }
